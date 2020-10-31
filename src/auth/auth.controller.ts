@@ -17,7 +17,7 @@ import { GetUser } from './get-user.decorator';
 @Controller('auth')
 export class AuthController {
   constructor(private authService: AuthService) {}
-
+  //Criar conta para usuario USER
   @Post('/signup')
   async signUp(
     @Body(ValidationPipe) createUserDto: CreateUserDto,
@@ -27,7 +27,7 @@ export class AuthController {
       message: 'Cadastro realizado com sucesso',
     };
   }
-
+  //Retorna token de um usuário
   @Post('/signin')
   async signIn(
     @Body(ValidationPipe) credentialsDto: CredentialsDto)
