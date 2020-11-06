@@ -6,7 +6,7 @@ COPY package.json .
 COPY package-lock.json .
 
 RUN npm install
-#RUN npm -g --save @nestjs/cli
+
 COPY . .
 
 RUN npm run build
